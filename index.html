@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#e5e1de");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
+</script>
+<script>
+
+$(document).ready(function(){
+    $("#toggle").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+
+
+</script>
+
+<style>
+#panel, #toggle {
+    padding: 5px;
+    text-align: center;
+    color:#fff;
+    background-color: #4c5d7c;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+
+</head>
+<body>
+
+
+<div id="toggle">Click to slide down panel and fill out the form</div>
+<div id="panel">
+Name: <input type="text" name="fullname"><br>
+Email: <input type="text" name="email">
+</div>
+
+
+</body>
+</html>
